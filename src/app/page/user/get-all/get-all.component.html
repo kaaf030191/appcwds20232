@@ -1,0 +1,26 @@
+<table class="table">
+	<thead>
+		<tr>
+			<th>DNI</th>
+			<th>Usuario</th>
+			<th>Nombre completo</th>
+			<th>Fecha de nacimiento</th>
+			<th>Género</th>
+			<th>Fecha registro</th>
+			<th>Fecha modificación</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let value of listUser">
+			<td>{{value.dni}}</td>
+			<td>{{value.userName}}</td>
+			<td>{{value.firstName + ' ' + value.surName}}</td>
+			<td>{{value.birthDate}}</td>
+			<td>{{value.gender}}</td>
+			<td>{{value.registerDate}}</td>
+			<td>{{value.modificationDate}}</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>

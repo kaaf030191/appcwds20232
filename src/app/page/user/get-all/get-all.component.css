@@ -1,0 +1,8 @@
+.table {
+	width: 100%;
+}
+
+.table > thead > tr > th, .table > tbody > tr > td {
+	border: 1px solid #000000;
+	padding: 4px;
+}

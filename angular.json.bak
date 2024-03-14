@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "appcwds20232": {
+    "appcwdd20232": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/appcwds20232",
+            "outputPath": "dist/appcwdd20232",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -67,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "appcwds20232:build:production"
+              "buildTarget": "appcwdd20232:build:production"
             },
             "development": {
-              "buildTarget": "appcwds20232:build:development"
+              "buildTarget": "appcwdd20232:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "appcwds20232:build"
+            "buildTarget": "appcwdd20232:build"
           }
         },
         "test": {
