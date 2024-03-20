@@ -20,7 +20,9 @@
 			<td>{{value.gender}}</td>
 			<td>{{value.registerDate}}</td>
 			<td>{{value.modificationDate}}</td>
-			<td></td>
+			<td>
+				<button type="button" (click)="delete(value.idUser)">Eliminar</button>
+			</td>
 		</tr>
 	</tbody>
 </table>

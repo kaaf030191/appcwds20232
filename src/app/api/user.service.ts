@@ -20,4 +20,8 @@ export class UserService {
 	public getAll(): Observable<any> {
 		return this.httpClient.get<any>(`https://localhost:7140/user/getall`, this.httpOptions);
 	}
+
+	public delete(idUser: string): Observable<any> {
+		return this.httpClient.delete<any>(`https://localhost:7140/user/delete?idUser=${idUser}`, this.httpOptions);
+	}
 }

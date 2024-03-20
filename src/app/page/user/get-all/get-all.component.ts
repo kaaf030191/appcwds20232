@@ -17,34 +17,22 @@ export class UserGetAllComponent {
 	ngOnInit() {
 		this.userService.getAll().subscribe({
 			next: (response: any) => {
-				console.log(response);
+				this.listUser = response.listDtoUser;
 			},
 			error: (error: any) => {
 				console.log(error);
 			}
 		});
+	}
 
-		this.listUser = [
-			{
-				dni: '77777777',
-				userName: 'kaaf030191',
-				firstName: 'Kevin Arnold',
-				surName: 'Arias Figueroa',
-				birthDate: '03-01-1991',
-				gender: true,
-				registerDate: new Date(),
-				modificationDate: new Date()
+	public delete(idUser: string): void {
+		this.userService.delete(idUser).subscribe({
+			next: (response: any) => {
+				this.listUser = this.listUser.filter(x => x.idUser != idUser);
 			},
-			{
-				dni: '88888888',
-				userName: 'karla123',
-				firstName: 'Karla',
-				surName: 'Sarmiento Aranibar',
-				birthDate: '08-02-1995',
-				gender: false,
-				registerDate: new Date(),
-				modificationDate: new Date()
+			error: (error: any) => {
+				console.log(error);
 			}
-		];
+		});
 	}
 }
