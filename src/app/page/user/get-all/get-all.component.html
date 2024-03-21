@@ -1,4 +1,4 @@
-<table class="table">
+<table class="table table-striped">
 	<thead>
 		<tr>
 			<th>DNI</th>
@@ -21,7 +21,7 @@
 			<td>{{value.registerDate}}</td>
 			<td>{{value.modificationDate}}</td>
 			<td>
-				<button type="button" (click)="delete(value.idUser)">Eliminar</button>
+				<button type="button" class="btn btn-danger btn-sm" (click)="delete(value.idUser)">Eliminar</button>
 			</td>
 		</tr>
 	</tbody>

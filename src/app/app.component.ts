@@ -6,4 +6,10 @@ import { Component } from '@angular/core';
 	styleUrl: './app.component.css'
 })
 
-export class AppComponent {}
+export class AppComponent {
+	componentName: string = 'getAllUser'
+
+	public changeComponent(componentName: string): void {
+		this.componentName = componentName;
+	}
+}
