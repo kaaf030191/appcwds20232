@@ -7,21 +7,19 @@ import { Observable } from 'rxjs';
 })
 
 export class UserService {
-	httpOptions: any = {
-		headers: new HttpHeaders({
-			'Content-Type': 'application/json'
-		})
-	};
-
 	constructor(
 		private httpClient: HttpClient
 	) {}
 
+	public insert(formData: FormData): Observable<any> {
+		return this.httpClient.post<any>(`https://localhost:7140/user/insert`, formData);
+	}
+
 	public getAll(): Observable<any> {
-		return this.httpClient.get<any>(`https://localhost:7140/user/getall`, this.httpOptions);
+		return this.httpClient.get<any>(`https://localhost:7140/user/getall`);
 	}
 
 	public delete(idUser: string): Observable<any> {
-		return this.httpClient.delete<any>(`https://localhost:7140/user/delete?idUser=${idUser}`, this.httpOptions);
+		return this.httpClient.delete<any>(`https://localhost:7140/user/delete?idUser=${idUser}`);
 	}
 }

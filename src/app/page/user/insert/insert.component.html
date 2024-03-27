@@ -1,1 +1,69 @@
-<p>insert works!</p>
+<section class="container" style="margin-top: 10px;">
+	<div class="card">
+		<div class="card-body">
+			<form [formGroup]="frmInsertUser">
+				<div class="row">
+					<div class="col-md-3">
+						<label for="">Usuario</label>
+						<input type="text" class="form-control" formControlName="username">
+					</div>
+					<div class="col-md-3">
+						<label for="">Contraseña</label>
+						<input type="password" class="form-control" formControlName="password">
+					</div>
+					<div class="col-md-3">
+						<label for="">Nombre</label>
+						<input type="text" class="form-control" formControlName="firstName">
+					</div>
+					<div class="col-md-3">
+						<label for="">Apellido</label>
+						<input type="text" class="form-control" formControlName="surName">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-3">
+						<label for="">DNI</label>
+						<input type="text" class="form-control" formControlName="dni">
+					</div>
+					<div class="col-md-3">
+						<label for="">Fecha nacimiento</label>
+						<div class="input-group">
+							<input
+								class="form-control"
+								formControlName="birthDate"
+								placeholder="yyyy-mm-dd"
+								ngbDatepicker
+								#birthDate="ngbDatepicker"
+							/>
+							<button class="btn btn-outline-secondary bi bi-calendar3" (click)="birthDate.toggle()" type="button"></button>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<label for="">Género</label>
+						<div>
+							<div class="form-check" style="display: inline-block;">
+								<input class="form-check-input" formControlName="gender" value="true" type="radio">
+								<label class="form-check-label">
+									Masculino
+								</label>
+							</div>
+							&nbsp;
+							<div class="form-check" style="display: inline-block;">
+								<input class="form-check-input" formControlName="gender" value="false" type="radio">
+								<label class="form-check-label">
+									Femenino
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-12 text-end">
+						<button type="button" class="btn btn-primary" (click)="sendFrmInsertUser()">Registrar datos ingresados</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</section>
